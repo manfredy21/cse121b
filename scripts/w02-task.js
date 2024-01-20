@@ -31,7 +31,10 @@ foodElement.innerHTML = favFood;
 let newFood = 'pizza ';
 favFood.push(newFood);
 foodElement.innerHTML += `<br>${favFood}`;
-
+let firstFood = favFood.shift();
+foodElement.innerHTML += `<br>${favFood}`;
+let lastFood = favFood.pop();
+foodElement.innerHTML += `<br>${favFood}`;
 
 
 
