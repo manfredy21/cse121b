@@ -23,7 +23,12 @@ let myProfile = {
         'whatch Tv'
     ],
 
-    placesLived: [],
+    placesLived: [
+        {
+            place: "Tlaquepaque, Mexico",
+            length: "6 Months"
+        }
+    ],
 };
 /*
 myProfile.placesLived.push(
@@ -42,8 +47,8 @@ myProfile.placesLived.push(
 */
 /* Populate Profile Object with placesLive objects */
 
-function addPlace(location, years) {
-    myProfile.placesLived.push({location, years});
+function addPlace(place, length) {
+    myProfile.placesLived.push({place, length});
 }
 
 addPlace("Santa Ana, El Salvador", "25 Years");
@@ -76,9 +81,9 @@ myProfile.hobbies.forEach(item => {
 
 myProfile.placesLived.forEach(place=> {
     let  dt = document.createElement("dt");
-    dt.textContent = place.location;
+    dt.textContent = place.place;
     let dd =  document.createElement("dd");
-    dd.textContent = place.years;
+    dd.textContent = place.length;
 
     document.querySelector("#places-lived").appendChild(dt);
     document.querySelector("#places-lived").appendChild(dd);
